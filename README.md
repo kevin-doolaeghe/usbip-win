@@ -81,12 +81,18 @@ usbip.exe attach -r <USBIP_SERVER_IP> -b 1-XXX
 
 ## Uninstall
 
-1. Uninstall VHCI driver :
+1. Detach device :
+```
+usbip.exe port
+usbip.exe detach -p XX
+```
+
+2. Uninstall VHCI driver :
 ```
 usbip.exe uninstall
 ```
 
-2. Disable `Test Signing` :
+3. Disable `Test Signing` :
 ```
 bcdedit.exe /set TESTSIGNING OFF
 ```
